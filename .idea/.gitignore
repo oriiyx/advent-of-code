@@ -6,3 +6,9 @@
 /dataSources.local.xml
 # Editor-based HTTP Client requests
 /httpRequests/
+/advent-of-code.iml
+/codeStyles/codeStyleConfig.xml
+/deployment.xml
+/modules.xml
+/php.xml
+/vcs.xml
