@@ -20,7 +20,6 @@ if ($handle) {
 fclose($handle);
 
 $mappedPipes = array();
-
 arrayChecker($mappedPipes, $pipes);
 
 function arrayChecker(array $mappedPipes, array $pipes)
@@ -32,8 +31,7 @@ function arrayChecker(array $mappedPipes, array $pipes)
     $mappedPipes = array_unique($mappedPipes);
 
     if (array_values($oldArray) == array_values($mappedPipes)) {
-        var_dump('same');
-        var_dump(count($mappedPipes));
+        print_r(count($mappedPipes));
     } else {
         unset($oldArray);
         arrayChecker($mappedPipes, $pipes);
@@ -51,6 +49,7 @@ function getPipes(array $pipes, array $mappedPipes): array
             $mappedPipes = array_unique($mappedPipes);
             continue;
         }
+
         foreach ($pipe as $item) {
             if (in_array($key, $mappedPipes)) {
                 array_push($mappedPipes, $item);
